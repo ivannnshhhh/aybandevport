@@ -76,19 +76,26 @@ body {
 }
 
 .hero-headline {
+    display: inline-block;
+    margin: auto;
+    font-family: monospace;
+    border-right: .13rem solid orange;
+    overflow: hidden;
+    white-space: nowrap;
     font-size: 3rem;
     color: #fff;
     margin-bottom: 1rem;
-    animation: typing 3s steps(30) infinite, blink 0.7s infinite;
+    animation: typing 3s steps(24, end) infinite, blink 0.7s infinite;
 }
 
 @keyframes typing {
     from { width: 0 }
-    to { width: 200px }
+    to { width: 24ch }
 }
 
 @keyframes blink {
-    50 percent { border-color: transparent }
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
 }
 
 .hero-subtitle {

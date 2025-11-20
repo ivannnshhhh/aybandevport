@@ -79,14 +79,16 @@ body {
     font-size: 3rem;
     color: #fff;
     margin-bottom: 1rem;
-    animation: typing 2s steps(30) infinite;
-    alternate-reverse;
+    animation: typing 3s steps(30) infinite, blink 0.7s infinite;
 }
 
 @keyframes typing {
-from {
-width: 0ch;
+    from { width: 0 }
+    to { width: 200px }
 }
+
+@keyframes blink {
+    50 percent { border-color: transparent }
 }
 
 .hero-subtitle {

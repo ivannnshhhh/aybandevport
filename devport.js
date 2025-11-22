@@ -12,7 +12,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.1 });
 
-const words = ["Welcome, I'm Aybanskiee", "Future Full Stack Developer", "Check My Project", "Halimaw Magmahal"];
+const words = ["Welcome, I'm Aybanskiee", "Future Full Stack Developer", "Check My Project", "Halimaw Magmahal", "Ikaw Lang Sapat Na", "Arayy Koo", "Kooyaa Natanggal"];
 let index = 0;
 let charIndex = 0;
 let isDeleting = false;

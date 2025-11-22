@@ -89,12 +89,6 @@ body {
     animation: typing 3s steps(25, end) infinite, blink 0.7s infinite;
 }
 
-@keyframes typing {
-  from { width: 0 }
-  to { width: 25ch }
-}
-
-
 @keyframes blink {
   from, to { border-color: transparent }
   50% { border-color: #FFA500; }

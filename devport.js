@@ -12,6 +12,43 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.1 });
 
+const words = ["Welcome, I'm Aybanskiee", "Future Full Stack Developer", "Check My Project", "Halimaw Magmahal", "Kuya Natanggal"];
+let index = 0;
+let charIndex = 0;
+let isDeleting = false;
+const target = document.getElementById("headline");
+const speed = 100; // adjust typing speed
+
+function typeEffect() {
+    const current = words[index];
+    const displayed = current.substring(0, charIndex);
+    target.textContent = displayed;
+    
+    if (!isDeleting) {
+        if (charIndex < current.length) {
+            charIndex++;
+        } else {
+            // word is fully displayed, pause before deleting
+            isDeleting = true;
+            setTimeout(typeEffect, 1000); // pause duration
+            return;
+        }
+    } else {
+        if (charIndex > 0) {
+            charIndex--;
+        } else {
+            // move to next word
+            isDeleting = false;
+            index++;
+            if (index === words.length) index = 0;
+        }
+    }
+    
+    setTimeout(typeEffect, speed);
+}
+
+typeEffect();
+
 document.querySelectorAll('.project-card, .about, .contact').forEach(el => {
     el.classList.add('fade-in');
     observer.observe(el);

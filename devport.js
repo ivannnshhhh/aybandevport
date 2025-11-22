@@ -30,7 +30,7 @@ function typeEffect() {
         } else {
             // word is fully displayed, pause before deleting
             isDeleting = true;
-            setTimeout(typeEffect, 1000); // pause duration
+            setTimeout(typeEffect, 1500); // pause duration
             return;
         }
     } else {

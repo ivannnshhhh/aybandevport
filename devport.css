@@ -77,14 +77,15 @@ body {
 
 .hero-headline {
     display: inline-block;
-    font-family: monospace;
+    color: #fff;
+     text-shadow: 0 0 10px #9400d3, 0 0 20px #EE82EE;
+    font-family: 'Permanent Marker', sans-serif;
     overflow: hidden;
     border-right: .15rem solid #FFA500;
     margin: auto;
     white-space: nowrap;
     font-size: 3rem;
     font-weight: bold;
-    color: #fff;
     margin-bottom: 1rem;
     animation: typing 3s steps(25, end) infinite, blink 0.7s infinite;
 }

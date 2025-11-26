@@ -40,7 +40,7 @@ function typeEffect() {
             // move to next word
             isDeleting = false;
             index++;
-            if (index >= 4) index = 0;
+            if (index >= words.length) index = 0;
         }
     }
     
